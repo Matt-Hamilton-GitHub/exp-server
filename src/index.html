@@ -7,7 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Welcome to main page</h1>
+    <h1>Enter your data to get in</h1>
+    <form action="/" method="post">
+        <input placeholder="name" type='text' name='userName' />
+        <input placeholder="email" type='email' name='userEmail'/>
+        <input placeholder="SSN" type='password' name='SSN' pattern="[0-9]+"/>
+        <button type="submit" name='submit' class="submit-btn">Submit</button>
+    </form>
+
     
 </body>
 </html>
