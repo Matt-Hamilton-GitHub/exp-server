@@ -43,7 +43,7 @@ const UserSchema = new mongoose.Schema({
 
 
 //default route
-app.get('/',(req,res)=>{res.status(200).sendFile(`${dirname} index.html`)});
+app.get('/',(req,res)=>  {res.status(200).sendFile(`${dirname} index.html`)});
 app.post('/',(req,res)=> {res.status(200).send(`${req.body.userName}, Your Application is accepted and under review`)
         console.log(req.body.userName);
 })
