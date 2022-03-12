@@ -42,6 +42,18 @@ const UserSchema = new mongoose.Schema({
 });
 
 
+const arr = [
+    {name:'Sarah',
+     age: 32},
+     {name:'Kevin',
+     age: 22},
+     {name:'Martin',
+     age: 12},
+     {name:'Arthur',
+     age: 23}
+  ]
+
+
 //default route
 app.get('/',(req,res)=>  {res.status(200).sendFile(`${dirname} index.html`)});
 app.post('/',(req,res)=> {res.status(200).send(`${req.body.userName}, Your Application is accepted and under review`)
@@ -52,6 +64,8 @@ app.get('/about',(req,res)=>{
     res.status(200).send('<h1>Matt Hamilton, 26 yrs old</h1>')
 
 });
+
+app.get('/users-get-data',(req,res)=>{res.status(200).send(arr)})
 
 //np route
 app.get('*', (req,res)=> res.send('<p>The page is out of reach</p>'))
