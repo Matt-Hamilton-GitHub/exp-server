@@ -65,7 +65,7 @@ app.get('/about',(req,res)=>{
 
 });
 
-app.get('/users-get-data',(req,res)=>{res.status(200).send(arr)})
+app.get('/users/get-data',(req,res)=>{res.status(200).send(arr)})
 
 //np route
 app.get('*', (req,res)=> res.send('<p>The page is out of reach</p>'))
