@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const Cors = require("cors")
 require('dotenv').config();
 
 //config
@@ -9,6 +10,8 @@ const port = process.env.PORT;
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('src/'));
 
+
+app.use(Cors())//adding headers to requests
 //set private data from env
 const password = process.env.PASSWORD;
 const adminName = process.env.ADMIN_NAME;
